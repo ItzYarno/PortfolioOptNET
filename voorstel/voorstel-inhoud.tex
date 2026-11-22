@@ -20,10 +20,10 @@
 % concrete behoefte is de aanleiding? Noem de mensen voor wie het een probleem
 % is. Vermijd algemeenheden als "bedrijven hebben nood aan".
 
-Binnen mijn stagecontext bij het HOGENT-team Data \& Software kreeg ik de
-opdracht om functies uit PyPortfolioOpt naar C\#/.NET te migreren.
-PyPortfolioOpt berekent rendement, risico en portefeuilleverdelingen; de
-Pythonversie vormt de referentie~\autocite{PyPortfolioOptDocs}.
+Bij HOGENT kreeg ik binnen het team Data \& Software de opdracht om functies
+van PyPortfolioOpt naar C\#/.NET te migreren. Deze Pythonbibliotheek berekent
+rendement, risico en portefeuilleverdelingen; de Pythonversie is de
+referentie~\autocite{PyPortfolioOptDocs}.
 
 %---------- 2. Doelstelling ---------------------------------------------------
 
@@ -34,12 +34,12 @@ Pythonversie vormt de referentie~\autocite{PyPortfolioOptDocs}.
 % het als een resultaat waarvan iemand kan vaststellen dat het er is, en
 % vermeld waaraan je zal merken dat het geslaagd is.
 
-Ik lever een zelfstandige .NET-toepassing die historische of gesimuleerde
-CSV-koersen verwerkt. Ze berekent historisch rendement, steekproef- en
-shrinkage-covariantie, minimumvolatiliteit, maximale Sharpe-ratio,
-doelrendement, portefeuilleprestaties, opgeschoonde gewichten en discrete
-allocatie; tests vergelijken de uitkomsten met Python binnen afgesproken
-toleranties.
+Ik lever een zelfstandige .NET-toepassing die koersgegevens uit CSV-bestanden
+leest uit historische of gesimuleerde data. Ze berekent historisch rendement
+en risico met steekproef- of shrinkagecovariantie. Optimalisaties richten zich
+op minimumvolatiliteit, maximale Sharpe-ratio of een doelrendement. De app
+rapporteert prestaties, normaliseert gewichten en ondersteunt discrete
+allocatie; tests vergelijken de resultaten met Python.
 
 %---------- 3. Technologieën --------------------------------------------------
 
