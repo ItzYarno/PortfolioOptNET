@@ -20,7 +20,10 @@
 % concrete behoefte is de aanleiding? Noem de mensen voor wie het een probleem
 % is. Vermijd algemeenheden als "bedrijven hebben nood aan".
 
-Vervang deze tekst.
+Binnen mijn stagecontext bij het HOGENT-team Data \& Software kreeg ik de
+opdracht om functies uit PyPortfolioOpt naar C\#/.NET te migreren.
+PyPortfolioOpt berekent rendement, risico en portefeuilleverdelingen; de
+Pythonversie vormt de referentie~\autocite{PyPortfolioOptDocs}.
 
 %---------- 2. Doelstelling ---------------------------------------------------
 
@@ -31,7 +34,12 @@ Vervang deze tekst.
 % het als een resultaat waarvan iemand kan vaststellen dat het er is, en
 % vermeld waaraan je zal merken dat het geslaagd is.
 
-Vervang deze tekst.
+Ik lever een zelfstandige .NET-toepassing die historische of gesimuleerde
+CSV-koersen verwerkt. Ze berekent historisch rendement, steekproef- en
+shrinkage-covariantie, minimumvolatiliteit, maximale Sharpe-ratio,
+doelrendement, portefeuilleprestaties, opgeschoonde gewichten en discrete
+allocatie; tests vergelijken de uitkomsten met Python binnen afgesproken
+toleranties.
 
 %---------- 3. Technologieën --------------------------------------------------
 
@@ -49,7 +57,13 @@ Vervang deze tekst.
 % dat dan nu al in één zin: dan weet je begeleider meteen dat de AVG of de
 % AI Act meespeelt, en kan dat mee bekeken worden bij de goedkeuring.
 
-Vervang deze tekst.
+Ik gebruik C\# met .NET 10, MathNet.Numerics, xUnit en een optimalisatiesolver;
+de architectuur volgt Domain-Driven Design~\autocite{MathNetDocs,DotNetDocs}.
+Python dient alleen als testreferentie, zodat de app zonder Python draait. AI
+helpt bij analyse, ontwerp, code en documentatie; ik controleer de uitkomsten
+en documenteer minstens acht interacties en twee gecorrigeerde fouten in
+AI-USAGE.md. De app verwerkt geen persoonsgegevens, voert geen transacties uit
+en geeft geen persoonlijk beleggingsadvies.
 
 %---------- 4. Afbakening -----------------------------------------------------
 
@@ -68,7 +82,11 @@ Vervang deze tekst.
 % Toets voor jezelf: welke analyse en welk ontwerp maak jij zelf? Kan je daar
 % niets over schrijven, dan heb je een taak en geen project.
 
-Vervang deze tekst.
+Mijn dagelijkse stageopdrachten bij HOGENT vallen buiten dit project. Ik
+analyseer en ontwerp zelfstandig de migratie van de opgegeven functies en lever
+de .NET-app, tests en vergelijking met Python op; een volledig financieel
+platform, live beurskoppelingen, transacties en persoonlijk advies vallen
+buiten scope.
 
 %---------- 5. Verwachte meerwaarde -------------------------------------------
 
@@ -79,7 +97,9 @@ Vervang deze tekst.
 % stage afgelopen is? Denk aan tijdwinst, minder fouten, nieuwe mogelijkheden,
 % lagere kosten, of een basis waarop verder gebouwd kan worden.
 
-Vervang deze tekst.
+HOGENT krijgt een demonstrator, broncode en tests als basis voor de
+portefeuilleberekeningen in .NET. De vergelijking toont waar de resultaten
+overeenkomen en verklaart eventuele numerieke verschillen.
 
 %---------- 6. Planning en werkbelasting --------------------------------------
 
@@ -100,19 +120,22 @@ Vervang deze tekst.
     \toprule
     \textbf{Fase} & \textbf{Wat lever je op} & \textbf{Uren} \\
     \midrule
-    Analyse en vereisten      & overzicht van de vereisten   & 15  \\
-    Technologiekeuze          & verantwoorde keuze           & 10  \\
-    Ontwerp                   & architectuur en gegevensmodel& 15  \\
-    Realisatie                & werkende oplossing           & 40  \\
-    Testen en validatie       & testverslag                  & 10  \\
-    Rapport, poster en demo   & de op te leveren documenten  & 10  \\
+    Analyse en vereisten      & scope en gedrag Python-referentie       & 8   \\
+    Ontwerp                   & architectuur en solverkeuze             & 10  \\
+    Realisatie                & .NET-berekeningen en optimalisatie      & 32  \\
+    Testen en validatie       & tests en vergelijking met Python        & 12  \\
+    Documentatie en demo      & AI-log, verslag en presentatie          & 8   \\
     \midrule
-    \textbf{Totaal}           &                              & \textbf{100} \\
+    \textbf{Totaal}           &                              & \textbf{70} \\
     \bottomrule
   \end{tabularx}
   \caption[Planning en werkbelasting]{\label{tab:vst-planning}%
-    Vervang deze verdeling door je eigen planning.}
+    Voorlopige planning van 70 uur (raming opdrachtfiche: 60--75 uur), nog af te stemmen met de mentor.}
 \end{table}
+
+Ik stel voor de uren te spreiden over de stageperiode, in overleg met mijn
+mentor. Ik plan minstens drie herkenbare Git-checkpoints en een presentatie
+van 12--15 slides met een demo van 15 minuten en 5 minuten vragen.
 
 %---------- 7. Risico's -------------------------------------------------------
 
@@ -126,4 +149,8 @@ Vervang deze tekst.
 %
 % Twee tot drie risico's met telkens één zin over wat je terugvalplan is.
 
-Vervang deze tekst.
+Een optimalisatiesolver kan extra integratiewerk vragen; daarom kies ik die
+vroeg en valideer ik eerst minimumvolatiliteit en Sharpe-ratio. Numerieke
+verschillen of ontbrekende historische data vang ik op met tolerantiegrenzen en
+gesimuleerde testgegevens. De voorgestelde 70 uur en spreiding over de
+stageperiode stem ik nog met mijn mentor af.

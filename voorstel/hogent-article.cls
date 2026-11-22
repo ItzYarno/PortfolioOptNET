@@ -232,16 +232,20 @@
 \RequirePackage{fontspec}     % Support for TTF fonts
 \RequirePackage{unicode-math}
 
-\newfontfamily\montserratblack{Montserrat}[BoldFont={Montserrat Black}]
-\newfontfamily\montserratextrabold{Montserrat}%
-[BoldFont={Montserrat ExtraBold}]
+\newfontfamily\montserratblack{Montserrat-Black.otf}%
+[Path=../fonts/Montserrat/,BoldFont=Montserrat-Black.otf]
+\newfontfamily\montserratextrabold{Montserrat-ExtraBold.otf}%
+[Path=../fonts/Montserrat/,BoldFont=Montserrat-ExtraBold.otf]
 
 \def\titlefont{\montserratblack\bfseries}
 \def\tocfont{\montserratblack}
 
-\setmainfont{Montserrat}      % Font selection
-\setmathfont{Fira Math}
-\setmonofont{Fira Code}
+\setmainfont{Montserrat-Regular.otf}%
+[Path=../fonts/Montserrat/,BoldFont=Montserrat-Bold.otf,%
+  ItalicFont=Montserrat-Italic.otf,BoldItalicFont=Montserrat-BoldItalic.otf]
+\setmathfont{FiraMath-Regular.otf}[Path=../fonts/FiraMath/]
+\setmonofont{FiraCode-Regular.otf}%
+[Path=../fonts/FiraCode/,BoldFont=FiraCode-Bold.otf]
 
 %% -----------------------------------------------------------------------------
 %% Page setup
